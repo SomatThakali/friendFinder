@@ -126,11 +126,11 @@
             
     let questions = questionsArray();
 
-    questions.forEach(question => {
+    questions.forEach((question, index) => {
         $(".container").append(
-            `<h3 <strong>Question ${(questions.indexOf(question) + 1)}</strong></h3>
+            `<h3 <strong>Question ${index + 1}</strong></h3>
             <p> ${question} </p>
-            <select class="chosen-select" id="q${(questions.indexOf(question) + 1)}">
+            <select class="chosen-select" id="q${index + 1}">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
