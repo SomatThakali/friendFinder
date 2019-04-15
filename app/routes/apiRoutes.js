@@ -10,25 +10,21 @@ module.exports = function(app) {
 
     let userInput = req.body;
 
-    console.log(friendsData[0].scores);
-    console.log(userInput.scores);
-
     let matchName = "";
     let matchImage = "";
     let maxDiff = 40;
 
-    for (let i = 0; i < friendsData.length; i++) {
+    friendsData.forEach((friends, i) => {
       let minDiff = 0;
-      for (let j = 0; j < userInput.scores.length; j++) {
-        minDiff += Math.abs(friendsData[i].scores[j] - userInput.scores[j]);
-      }
-
+      friends.scores.forEach((score, j) => {
+        minDiff += Math.abs(score - userInput.scores[j]);
+      });
       if (minDiff < maxDiff) {
         maxDiff = minDiff;
         matchName = friendsData[i].name;
         matchImage = friendsData[i].photo;
       }
-    }
+    });
 
     friendsData.push(userInput);
 
