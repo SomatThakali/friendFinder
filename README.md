@@ -4,7 +4,7 @@ FriendFinder application -- basically a dating app. This full-stack site will ta
 
 ## Getting Started
 
-Clone a copy of the liri-node-app repo by running:
+Clone a copy of the friendfinder repo by running:
 
 `git clone git@github.com:SomatThakali/friendFinder.git`
 
