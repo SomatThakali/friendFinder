@@ -24,7 +24,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  
   </head>
   
   <style>
@@ -37,6 +37,11 @@
     margin-top: -20px;
    margin-left: 100PX;
    margin-bottom: 20px;
+  }
+
+  img{
+    max-height: 200px;
+    max-width: 200px;
   }
   </style>
   <body>
@@ -76,7 +81,7 @@
         <div>
           <p class="api">
             <a href="/api/friends">API Friends List</a> |
-            <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a>
+            <a href="https://github.com/SomatThakali/friendFinder">GitHub Repo</a>
           </p>
         </div>
       </footer>
@@ -98,9 +103,7 @@
           <div class="modal-body">
             <h2 id="match-name"></h2>
             <img
-              id="match-img"
-              src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg"
-              alt=""
+              id="match-img" class="img-fluid" alt=""
             />
           </div>
           <div class="modal-footer">
@@ -125,9 +128,9 @@
 
     questions.forEach(question => {
         $(".container").append(
-            `<h3 class="topMargin">Question ${(questions.indexOf(question) + 1)}</h3>
+            `<h3 <strong>Question ${(questions.indexOf(question) + 1)}</strong></h3>
             <p> ${question} </p>
-            <select class="chosen-select dropList" id="q${(questions.indexOf(question) + 1)}">
+            <select class="chosen-select" id="q${(questions.indexOf(question) + 1)}">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
